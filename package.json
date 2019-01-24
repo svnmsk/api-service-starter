@@ -1,0 +1,45 @@
+{
+  "name": "api-service-starter",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prod": "NODE_ENV=production pm2 start src/index.js -i max --name=KYC-Service",
+    "dev": "NODE_ENV=development nodemon src/index.js",
+    "test": "NODE_ENV=test node ./scripts/migrate && jest -c ./jest.config.js --runInBand"
+  },
+  "author": "sv",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.1",
+    "compose-middleware": "^5.0.0",
+    "compression": "^1.7.3",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.3",
+    "express-async-wrap": "^1.0.0",
+    "express-jwt": "^5.3.1",
+    "express-qs-parser": "0.0.1",
+    "helmet": "^3.13.0",
+    "jest-environment-node": "^23.4.0",
+    "jsonwebtoken": "^8.3.0",
+    "migrate-mongoose": "^3.2.2",
+    "mongoose": "^5.2.18",
+    "mongoose-fill": "^1.7.0",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.0",
+    "ramda": "^0.25.0",
+    "require-all": "^3.0.0",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.3.3",
+    "winston-sentry": "^0.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.4",
+    "regenerator-runtime": "^0.12.1",
+    "supertest": "^3.3.0"
+  }
+}
